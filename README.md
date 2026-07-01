@@ -1,128 +1,132 @@
-# 🌍 NABHX – HCHO Hotspot Detection & Source Region Analysis
+# 🌍 NABHX
 
-> **Bharatiya Antariksh Hackathon (BAH) 2026**  
-> **Problem Statement 3 – Objective 2**
+## AI-Powered Environmental Intelligence Platform for ISRO Hackathon
 
-NABHX is an AI-powered geospatial analysis platform that detects Formaldehyde (HCHO) hotspots across India using satellite observations, fire activity, and wind reanalysis data. The project identifies pollution source regions, analyzes Fire–HCHO relationships, and studies atmospheric pollutant transport to support air quality monitoring and environmental decision-making.
+NABHX is an AI-based environmental monitoring platform developed for the ISRO Hackathon. It integrates satellite observations, machine learning, geospatial analytics, and early warning systems to monitor India's air quality and formaldehyde (HCHO) pollution.
 
 ---
 
-# 🚀 Project Overview
+# 📌 Objectives
 
-NABHX integrates multiple geospatial datasets to identify HCHO hotspot regions across India. The project combines machine learning, satellite imagery, fire activity, and meteorological data to generate scientifically meaningful insights.
+## 🎯 Objective 1 – Nationwide AQI Prediction
 
-The complete pipeline includes:
+Develop an AI model to predict Air Quality Index (AQI) across India using weather and fire-related parameters.
 
-- HCHO Hotspot Detection using DBSCAN
-- Monthly & Annual HCHO Trend Analysis
-- Fire–HCHO Correlation Analysis
+### Features
+
+- AQI Prediction using Machine Learning
+- India AQI Heatmap
+- Annual AQI Mapping
+- Model Comparison
+- Feature Importance Analysis
+- Daily Forecast Visualization
+- K-Fold Cross Validation
+- XGBoost & Random Forest Models
+
+---
+
+## 🎯 Objective 2 – HCHO Hotspot Detection
+
+Identify and analyze HCHO hotspots over India using Sentinel-5P satellite observations.
+
+### Features
+
+- HCHO Hotspot Detection
+- Monthly & Annual HCHO Analysis
+- DBSCAN Clustering
+- Wind Transport Analysis
 - India Source Region Index (ISRI)
-- ERA5 Wind Transport Analysis
 - Interactive Dashboard
+- Spatial Trend Analysis
 
 ---
 
-# 🎯 Objectives
+# 💡 Innovation
 
-- Detect HCHO hotspot regions across India.
-- Identify major HCHO source regions.
-- Analyze the relationship between fire activity and HCHO concentration.
-- Assess atmospheric transport using ERA5 wind data.
-- Visualize results through interactive dashboards.
+## Early Warning System
 
----
+NABHX includes an AI-powered Early Warning System that predicts next-day AQI and sends push notifications to users through Firebase Cloud Messaging (FCM).
 
-# ✨ Key Features
+Features include:
 
-- ✅ DBSCAN-based HCHO Hotspot Detection
-- ✅ Annual Mean HCHO Heatmap
-- ✅ Monthly Trend Analysis
-- ✅ India Source Region Index (ISRI)
-- ✅ Fire–HCHO Correlation Analysis
-- ✅ ERA5 Wind Transport Visualization
-- ✅ Interactive Plotly Dashboard
-- ✅ High-Resolution Maps & Charts
-
----
-
-# 🛰️ Datasets Used
-
-The raw datasets are not included in this repository due to their large file size.
-
-| Dataset | Source |
-|----------|--------|
-| HCHO Satellite Data | Sentinel-5P TROPOMI (Google Earth Engine) |
-| Fire Data | VIIRS SNPP – NASA FIRMS |
-| Wind Data | ERA5 Reanalysis (ECMWF Copernicus) |
-| Ground Validation | CPCB Air Quality Data |
-
-**Study Period:** 2023–2024
+- 24-Hour AQI Forecast
+- High AQI Alerts
+- Firebase Push Notifications
+- City-wise Forecasts
+- Interactive Forecast Heatmaps
 
 ---
 
 # 🛠️ Technologies Used
 
 - Python
-- NumPy
-- Pandas
+- Machine Learning
+- XGBoost
+- Random Forest
 - Scikit-learn
-- Rasterio
+- Pandas
+- NumPy
 - GeoPandas
+- Rasterio
+- Folium
 - Matplotlib
 - Plotly
-- Folium
+- Firebase Cloud Messaging (FCM)
 
 ---
 
 # 📂 Project Structure
 
-```text
+```
 NABHX/
 │
-├── data/
-├── output/
-│   ├── images/
-│   ├── hcho_dashboard.png
-│   ├── hcho_hotspot_dashboard.html
-│   └── *.csv
+├── Objective1_AQI/
+│   ├── models/
+│   ├── outputs/
+│   ├── shapefiles/
+│   ├── data/
+│   └── Python scripts
 │
-├── hcho_hotspot_dbscan.py
-├── india_source_region_index.py
-├── wind_transport.py
-├── requirements.txt
+├── Objective2_HCHO/
+│   ├── data/
+│   ├── output/
+│   ├── images/
+│   └── Python scripts
+│
 ├── README.md
+├── requirements.txt
 └── .gitignore
 ```
 
 ---
 
-# 📊 Outputs
+# 📊 Datasets
 
-- HCHO Annual Mean Heatmap
-- DBSCAN Hotspot Clusters
-- Monthly HCHO Trend Analysis
-- Top HCHO Cluster Comparison
-- India Source Region Index (ISRI)
-- Wind Transport Analysis
-- Interactive HTML Dashboard
+The project uses publicly available datasets from:
+
+- Sentinel-5P/TROPOMI Satellite Data
+- NASA POWER Meteorological Data
+- FIRMS Fire Data
+- AQI Monitoring Data
+- Administrative Shapefiles of India
 
 ---
 
-# ▶️ Installation
+# 🚀 Installation
 
-Clone the repository
+Clone the repository:
 
 ```bash
 git clone https://github.com/your-username/NABHX.git
 ```
 
-Move to the project directory
+Move into the project directory:
 
 ```bash
 cd NABHX
 ```
 
-Install dependencies
+Install dependencies:
 
 ```bash
 pip install -r requirements.txt
@@ -132,62 +136,43 @@ pip install -r requirements.txt
 
 # ▶️ Run the Project
 
-```bash
-python hcho_hotspot_dbscan.py
-```
+Run Objective 1:
 
 ```bash
-python india_source_region_index.py
+python Objective1_AQI/objective1_final.py
 ```
 
+Run Objective 2:
+
 ```bash
-python wind_transport.py
+python Objective2_HCHO/hcho_hotspot_dbscan.py
 ```
 
 ---
 
-# 💡 Innovation
+# 📈 Outputs
 
-NABHX introduces the **India Source Region Index (ISRI)**, a composite metric that ranks Indian states using:
+The project generates:
 
-- HCHO Concentration
-- Fire Count
-- Post-Monsoon Fire Activity
-- Fire–HCHO Correlation
-
-The project also integrates **ERA5 Wind Transport Analysis** to trace pollutant movement from biomass-burning regions to downstream HCHO hotspots.
-
----
-
-# 🌍 Applications
-
-- Air Quality Monitoring
-- Pollution Source Identification
-- Environmental Research
-- Atmospheric Analysis
-- Policy Support
-- Smart Environmental Decision-Making
-
----
-
-# 📌 Future Scope
-
-- Near Real-Time Monitoring
-- AQI Forecast Integration
-- Early Warning & Alert System
-- Web Dashboard Deployment
-- Mobile Application Support
+- AQI Prediction Maps
+- AQI Heatmaps
+- HCHO Hotspot Maps
+- DBSCAN Cluster Maps
+- Wind Transport Maps
+- Forecast Visualizations
+- Feature Importance Graphs
+- Interactive HTML Dashboards
 
 ---
 
 # 👥 Team
 
-**Team Name:** NABHX
+Developed for the **ISRO Hackathon**.
 
-Developed for **Bharatiya Antariksh Hackathon (BAH) 2026**
+Project Name: **NABHX**
 
 ---
 
 # 📄 License
 
-This project is developed for educational and research purposes as part of the **Bharatiya Antariksh Hackathon (BAH) 2026**.
+This project is developed for educational and research purposes under the ISRO Hackathon.

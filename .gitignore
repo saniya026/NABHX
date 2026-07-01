@@ -5,3 +5,35 @@ __pycache__/
 # Large datasets
 data/*.tif
 data/*.csv
+
+
+# Python
+__pycache__/
+*.py[cod]
+*.pkl
+
+# Virtual Environment
+venv/
+.env
+
+# VS Code
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs
+*.log
+
+# Firebase Secrets
+firebase_key.json
+token.json
+
+# Large Data Files
+*.tif
+*.tiff
+*.xlsx
+
+# OS Files
+.DS_Store
+Thumbs.db
