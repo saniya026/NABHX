@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.vscode/
+
+# Large datasets
+data/*.tif
+data/*.csv
