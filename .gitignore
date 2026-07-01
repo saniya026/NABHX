@@ -37,3 +37,8 @@ token.json
 # OS Files
 .DS_Store
 Thumbs.db
+
+Objective2_HCHO/data/india_fires_raw_2023_2024.csv
+Objective2_HCHO/data/*.tif
+*.pkl
+__pycache__/
